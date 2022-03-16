@@ -1,0 +1,81 @@
+{% extends "basehtml.html" %}
+
+{% block content  %}
+
+<h1>{{msg}}</h1>
+ <form action="/RAMS" name ="RAMS" method = 'POST'>
+    <label style="font-size: 25px;">Choose Study :</label>
+      <select name="studylist" method="POST" action="/">
+        <option value="" selected>{{"Select Study"}}</option>
+        {% for study in studies[1:] %}
+          <option value="{{study}}">{{study}}</option>
+        {% endfor %}
+      </select><br><br>
+    <label style="font-size: 25px;">Choose Org:</label>
+      <select name="subgroups" method="POST" action="/">
+        <option value="" selected >{{"Select subgroups"}}</option>
+        {% for subgroup in subgroups %}
+          <option value="{{subgroup}}">{{subgroup}}</option>
+        {% endfor %}
+      </select><br><br>
+    <label style="font-size: 25px;">Choose activities:</label>
+      <select name="activities" method="POST" action="/">
+        <option value="" selected>{{"Choose Activity"}}</option>
+        {% for activity in activities %}
+          <option value="{{activity}}">{{activity}}</option>
+        {% endfor %}
+      </select><br><br>
+
+     <label for="text">Comments:</label>
+    <input name="Comments" name = "Comments:"><br><br>
+
+     <label style="font-size: 25px;">Choose Time Spent(hr):</label>
+      <select name="timespenthrs" method="POST" action="/">
+        <option value="" selected>{{"select time spent"}}</option>
+        {% for timespenthr in timespenthrs[1:] %}
+          <option value="{{timespenthr}}">{{timespenthr}}</option>
+        {% endfor %}
+      </select><br><br>
+
+     <label style="font-size: 25px;">Choose Time Spent(min):</label>
+      <select name="timespentmins" method="POST" action="/">
+        <option value="{{timespentmins[0]}}" selected>{{"select time spent"}}</option>
+        {% for timespentmin in timespentmins[1:] %}
+          <option value="{{timespentmin}}">{{timespentmin}}</option>
+        {% endfor %}
+      </select><br><br>
+
+    <input type="submit" style="font-size: 20px" value="Save"><br><br><br>
+
+
+        <a href="/">Go to Home</a><br><br><br><br><br><br>
+
+
+     <div><a>
+         <table>
+            <tr>
+                {% for col in column_names %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in row_data %}
+            <tr>
+                {% for col, row_ in zip(column_names, row) %}
+                {% if col == link_column %}
+                <td>
+                    <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button">
+                        {{ row_ }}
+                    </button>
+                </td>
+                {% else %}
+                <td>{{row_}}</td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+        </table>
+     </a></div>
+  </form>
+
+{% endblock  %}

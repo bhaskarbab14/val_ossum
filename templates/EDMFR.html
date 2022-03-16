@@ -1,0 +1,31 @@
+{% extends "basehtml.html" %}
+
+{% block content  %}
+
+
+
+<form action="/edmfr" method="POST" enctype=multipart/form-data>
+<!--<form action="/index" method="POST" >-->
+    <br style="text-align: center;"><label for="text">EDMFR</label><br><br>
+    <label for="myfile">Upload Consolidated RuleFile.xlsx:</label>
+    <input type="file" id="Rulefile" name="Rulefile"><br>
+    <label for="myfile">Upload iBOW (CDDRA Data Dump file):</label>
+    <input type="file" id="iBOWfile" name="iBOWfile"><br>
+    <label for="myfile">Upload mapping table.csv:</label>
+    <input type="file" id="mapfile" name="mapfile"><br><br>
+    <label for="myfile">Upload previous EDMFR report with comments:</label>
+    <input type="file" id="prevfile" name="prevfile"><br>
+    <label for="myfile">Upload Study Production Version List:</label>
+    <input type="file" id="stdprdfile" name="stdprdfile"><br>
+
+
+        <br><input type="submit" name="Click to generate report" value="Click to generate report"><br><br><br><br>
+
+        <a href="/">Go to Home</a>
+    </div>
+
+</form>
+
+
+
+{% endblock   %}

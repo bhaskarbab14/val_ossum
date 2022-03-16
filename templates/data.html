@@ -1,0 +1,90 @@
+{% extends "basehtml.html" %}
+
+{% block content  %}
+
+
+<form method="POST">
+    <div style="text-align: center;"><label for="text">CDDRA Resourcing</label><br><br>
+
+    <div style="text-align: left;"><label for="text">Sub groups</label><br>
+
+    <br><label for="text">FTEs for SU - CDD</label>
+    <input name="text1"  value = {{data}}>
+
+    <label for="text">FTEs for PPC - CDD</label>
+    <input name="text2"  value = 240>
+    <label for="text">Total FTEs - CDD</label>
+    <input name="text3"  value = 62>
+
+    <br><br><label for="text">FTEs for SU - DAP</label>
+    <input name="text4"  value = {{data}}>
+
+    <label for="text">FTEs for PPC - DAP</label>
+    <input name="text5"  value = 240>
+    <label for="text">Total FTEs - DAP</label>
+    <input name="text6"  value = 62>
+
+    <br><br><label for="text">FTEs for SU - DRRA</label>
+    <input name="text7"  value = {{data}}>
+
+    <label for="text">FTEs for PPC - DRRA</label>
+    <input name="text8"  value = 240>
+    <label for="text">Total FTEs - DRRA</label>
+    <input name="text9"  value = 62><br><br>
+
+    </div><br><br>
+
+    </div>
+    <div style="text-align: center;"><label for="text">CDDRA Total FTEs</label><br>
+
+    <br><br><label for="text">Total FTEs for CDDRA</label>
+    <input name="text2"  value = 240><br><br><br><br>
+
+    <div style="text-align: left;"><label for="text">CDD towers bifurcation</label><br>
+
+    <br><br><label for="text">FTEs for SU - SU</label>
+    <input name="text1"  value = {{data}}>
+
+    <label for="text">Total FTEs - SU</label>
+    <input name="text3"  value = 62>
+
+
+    <br><br><label for="text">FTEs for PPC - PPC</label>
+    <input name="text1"  value = {{data}}>
+
+    <label for="text">Total FTEs - PPC</label>
+    <input name="text3"  value = 62>
+
+    <br><br><label for="text">FTEs for SU - CF</label>
+    <input name="text2"  value = 240>
+
+    <label for="text">FTEs for PPC - CF</label>
+    <input name="text2"  value = 240>
+    <label for="text">Total FTEs - CF</label>
+    <input name="text3"  value = 62>
+
+    <br><br><label for="text">FTEs for SU - RF</label>
+    <input name="text2"  value = 240>
+
+    <label for="text">FTEs for PPC - RF</label>
+    <input name="text2"  value = 240>
+    <label for="text">Total FTEs - RF</label>
+    <input name="text3"  value = 62>
+
+        <br><br><label for="text">FTEs for NDPs</label>
+    <input name="text1"  value = {{data}}><br><br><br><br>
+
+        <a href="/">Go to Home</a>
+
+
+
+
+
+
+    </div>
+    </div>
+
+</form>
+
+
+{% endblock   %}

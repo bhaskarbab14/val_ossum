@@ -1,0 +1,107 @@
+{% extends "basehtml.html" %}
+
+{% block content  %}
+
+
+
+<div id="tabs">
+            <a href="/Radaout-file/" target="blank"><button class='btn btn-default'>Download Rada output!</button></a><br><br>
+            <a href="/">Go to Home</a>
+            <ul>
+                <li><a href="#tabs-1">Results_FIELDS</a></li>
+                <li><a href="#tabs-2">Results_FORMS</a></li>
+                <li><a href="#tabs-3">Results_DICTIONARY</a></li>
+                <li><a href="#tabs-4">Results_Multiple</a></li>
+                <li><a href="#tabs-5">Results_Restrictions</a></li>
+                <li><a href="#tabs-6">Results_EditChecks</a></li>
+                <li><a href="#tabs-7">Results_ALS</a></li>
+                <li><a href="#tabs-8">Results_SSD</a></li>
+                <li><a href="#tabs-9">Results_ECS</a></li>
+                <li><a href="#tabs-10">warnings</a></li>
+
+            </ul>
+            <div id="tabs-1">
+                <div class="table_container">
+                    {% for table in fieldstable %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="table_container">
+                    {% for table in formstable %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-3">
+                <div class="table_container">
+                    {% for table in dictstable %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-4">
+                <div class="table_container">
+                    {% for table in multistable %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-5">
+                <div class="table_container">
+                    {% for table in frmrestricts %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-6">
+                <div class="table_container">
+                    {% for table in echecks %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-7">
+                <div class="table_container">
+                    {% for table in alschecks %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-8">
+                <div class="table_container">
+                    {% for table in ssdchecks %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-9">
+                <div class="table_container">
+                    {% for table in ecschecks %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="tabs-10">
+                <div class="table_container">
+                    {% for table in warnings %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+
+{% endblock   %}

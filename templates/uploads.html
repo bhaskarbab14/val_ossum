@@ -1,0 +1,36 @@
+{% extends "basehtml.html" %}
+
+{% block content  %}
+
+
+<form action="/uploads" method="POST" enctype=multipart/form-data>
+<!--<form action="/index" method="POST" >-->
+    <div>
+    <br style="text-align: center;"><label for="text">Please upload the documents here</label><br><br>
+    <label for="myfile">Upload ALS:</label>
+    <input type="file" id="alsfile" name="alsfile" multiple="">
+    <input type="submit" name="Upload ALSs" value="Upload ALSs"><br><br>
+    <label for="myfile">Upload metadata:</label>
+    <input type="file" id="metafile" name="metafile" multiple="">
+        <input type="submit" name="Upload Metadata" value="Upload Metadata"><br><br>
+    <label for="myfile">Upload iBow dump file (studies list):</label>
+    <input type="file" id="iBowfile" name="iBowfile">
+        <input type="submit" name="Upload studies list" value="Upload studies list"><br><br>
+    <label for="myfile">Upload ABCD file (activities list):</label>
+    <input type="file" id="abcdfile" name="abcdfile" >
+        <input type="submit" name="Upload activities list" value="Upload activities list"><br><br>
+    <label for="myfile">Upload NDPs file (NDPs list):</label>
+        <input type="file" id="ndpfile" name="ndpfile" >
+        <input type="submit" name="Upload NDPs list" value="Upload NDPs list"><br><br>
+        <label for="myfile">Upload iDTS file:</label>
+        <input type="file" id="idtsfile" name="idtsfile" >
+        <input type="submit" name="Upload iDTS file" value="Upload iDTS file"><br><br><br><br>
+
+        <a href="/">Go to Home</a>
+
+    </div>
+
+</form>
+
+
+{% endblock   %}
