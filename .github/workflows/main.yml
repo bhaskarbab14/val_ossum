@@ -28,10 +28,10 @@ jobs:
 
     steps:
     - name: Git clone our repository
-      uses: action/checkout@v1 
+      uses: actions/checkout@v1 
 
     - name: Create ZIP deployment package
-      uses: action/checkout@v1 
+      uses: actions/checkout@v1 
       
     - name: Configure my AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
