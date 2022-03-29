@@ -23,9 +23,10 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     my_ci_pipeline:
+    
       runs_on: ubuntu-latest
         
-       steps:
+      steps:
         - name: Git clone our repository
           uses: action/checkout@v1
           
