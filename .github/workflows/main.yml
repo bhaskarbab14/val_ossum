@@ -7,7 +7,7 @@ env:
   EB_APPLICATION_NAME       : "Ossumflaskapp"
   EB_ENVIRONMENT_NAME       : "Ossumflaskapp-env"
   DEPLOY_PACKAGE_NAME: "flask-app-${{github.sha}}.zip"
-  AWS_REGION     : "us-east-1"
+  AWS_REGION_NAME     : "us-east-1"
 
 # Controls when the workflow will run
 on:
